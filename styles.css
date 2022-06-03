@@ -1,0 +1,46 @@
+.container{
+display: grid;
+height: 100vh;
+grid-template-columns: 0.2fr 0.6fr  0.2fr ;
+grid-template-rows: 0.5fr  ;
+grid-template-areas: 
+"leftsidebar1 main rightsidebar"
+"leftsidebar2 politics politics"
+"leftsidebar2  technology technology"
+"leftsidebar2  local local"
+"leftsidebar2 opinion opinion"
+"leftsidebar2 sports sports"
+
+;
+grid-gap:0px;
+border: 1px solid black;
+}
+h3{
+    text-align: center;
+
+}
+#leftsidebar1{
+    margin: 0px;
+    border: 1px solid grey;
+    grid-area
+}
+#main{
+    margin: 0;
+    border: 1px solid grey;
+}
+#rightsidebar{
+    margin: 0px;
+    border: 1px solid grey;
+}
+#main#img{
+    width: 1000px;
+    height: 30px;
+}
+#leftsidebar2 {
+    margin: 0px;
+    border: 1px solid grey;
+    
+}
+#politics{
+    background-color: yellow;
+}
