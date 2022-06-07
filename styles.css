@@ -1,46 +1,86 @@
 .container{
-display: grid;
-height: 100vh;
-grid-template-columns: 0.2fr 0.6fr  0.2fr ;
-grid-template-rows: 0.5fr  ;
-grid-template-areas: 
-"leftsidebar1 main rightsidebar"
-"leftsidebar2 politics politics"
-"leftsidebar2  technology technology"
-"leftsidebar2  local local"
-"leftsidebar2 opinion opinion"
-"leftsidebar2 sports sports"
-
-;
-grid-gap:0px;
-border: 1px solid black;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 4fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr ;
+    grid-template-areas: 
+        "left-sidebar main right-sidebar"
+        "bottom-sidebar politics politics"
+        "bottom-sidebar technology technology"
+        "bottom-sidebar locals locals"
+        "bottom-sidebar opinions opinions"
+        "bottom-sidebar sports sports"
+    ;
+    border: 1px solid black;
 }
-h3{
-    text-align: center;
-
+main{
+    grid-area: main;
+    align-items: center;
+    border: solid 1px ;
 }
-#leftsidebar1{
-    margin: 0px;
-    border: 1px solid grey;
-    grid-area
+#left-sidebar{
+    grid-area: left-sidebar;
+    border: solid 1px ;
 }
-#main{
-    margin: 0;
-    border: 1px solid grey;
+#right-sidebar{
+    grid-area: right-sidebar;
+    border: solid 1px ;
 }
-#rightsidebar{
-    margin: 0px;
-    border: 1px solid grey;
-}
-#main#img{
-    width: 1000px;
-    height: 30px;
-}
-#leftsidebar2 {
-    margin: 0px;
-    border: 1px solid grey;
-    
+#bottom-sidebar{
+    grid-area:bottom-sidebar ;
+    border: solid 1px ;}
+img{
+    height: 500px;
+    width: 400px;
 }
 #politics{
-    background-color: yellow;
+    grid-area: politics;
+    background-color: khaki;
+}
+#technology{
+    grid-area: technology;
+    background-color: aqua;
+}
+#locals{
+    grid-area: locals;
+    background-color: rgb(11, 152, 235);
+}
+#opinions{
+    grid-area: opinions;
+    background-color: aquamarine; 
+}
+#sports{
+    grid-area: sports;
+    background-color: purple;
+}
+.para{
+    font-size: 15;
+    text-align: center;
+    font-weight: bold;
+}
+h4{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+@media (max-width:576px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1.2fr 1.2fr 1.2fr 1.2fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas:  
+        "left-sidebar"
+        "main"
+        "right-sidebar"
+        "bottom-sidebar"
+        "politics"
+        "technology"
+        "locals"
+        "opinions"
+        "sports";
+       
+    }
 }
