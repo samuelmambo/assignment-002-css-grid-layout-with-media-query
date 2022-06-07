@@ -48,6 +48,7 @@ img{
 #opinions{
     grid-area: opinions;
     background-color: aquamarine; 
+    
 }
 #sports{
     grid-area: sports;
